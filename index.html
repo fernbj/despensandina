@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despensa Toledana</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importamos iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <div class="logo">
+            <img src="imagenes/logo página.png" alt="Logo de Despensa Toledana">
+        </div>
+        <div class="site-name">
+            <h1>DESPENSA ANDINA</h1>
+        </div>
+        <nav class="navigation">
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Quiénes Somos</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="cart-icon" id="cart-button">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección Inicio -->
+        <section id="home" class="home-section">
+            <h2> Sabores Auténticos de la Tierra </h2>
+            <p> Tienda virtual de café, chocolate y miel de pequeños productores — alta calidad.
+                Tienda virtual de café, chocolate y miel de pequeños productores — alta calidad.
+                Tienda virtual de café, chocolate y miel de pequeños productores — alta calidad.
+                Tienda virtual de café, chocolate y miel de pequeños productores — alta calidad.
+                Tienda virtual de café, chocolate y miel de pequeños productores — alta calidad.
+            </p>
+            
+            <!-- Carrusel de marcas -->
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="imagenes/cafe carrusel.png" alt="Cooperativas Cafetaleras">
+                        <img src="imagenes/cafe carrusel.png" alt="Cooperativas Cafetaleras">
+                        <img src="imagenes/cafe carrusel.png" alt="Cooperativas Cafetaleras">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagenes/cacao carrusel.png" alt="Proceso Chocolate Artesanal">
+                        <img src="imagenes/cacao carrusel.png" alt="Proceso Chocolate Artesanal">
+                        <img src="imagenes/cacao carrusel.png" alt="Proceso Chocolate Artesanal">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagenes/miel carrusel.png" alt="Apicultura Sostenible">
+                        <img src="imagenes/miel carrusel.png" alt="Apicultura Sostenible">
+                        <img src="imagenes/miel carrusel.png" alt="Apicultura Sostenible">
+                    </div>
+                </div>
+                <button class="carousel-prev">&lt;</button>
+                <button class="carousel-next">&gt;</button>
+            </div>
+        </section>
+
+        <!-- Sección Productos -->
+        <section id="products" class="products-section">
+            <h1>Despensa</h1>
+            <!-- Búsqueda -->
+                 <div class="search-bar">
+                <input type="text" placeholder="Buscar productos..." id="search-input">
+            </div>
+
+            <!-- Despensas -->
+            <div class="despensas-container">
+                
+                <!-- Café -->
+                <div class="despensa">
+                    <img src="category-icons/cafe.svg" alt="Café">
+                    <h3>Café</h3>
+                    <p class="price-range">$350 - $500/kg</p>
+                    <button class="explore-btn" data-category="cafe">Explorar</button>
+                </div>
+                
+                <!-- Chocolate -->
+                <div class="despensa">
+                    <img src="category-icons/chocolate.svg" alt="Chocolate">
+                    <h3>Chocolate</h3>
+                    <p class="price-range">$400 - $650/kg</p>
+                    <button class="explore-btn" data-category="chocolate">Explorar</button>
+                </div>
+                
+                <!-- Miel -->
+                <div class="despensa">
+                    <img src="category-icons/miel.svg" alt="Miel">
+                    <h3>Miel</h3>
+                    <p class="price-range">$250 - $420/litro</p>
+                    <button class="explore-btn" data-category="miel">Explorar</button>
+                </div>
+            </div>
+            
+
+            <h2>Nuestras Marcas</h2>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Aquí se cargarán dinámicamente los productos -->
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contact" class="contact-section">
+            <h2>Ponte en contacto con nosotros</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Teléfono" pattern="[0-9]{9}">
+                </div>
+                <div class="form-group">
+                    <select id="contact-reason" name="contact-reason">
+                        <option value="">Motivo de contacto</option>
+                        <option value="info">Información general</option>
+                        <option value="order">Consulta de pedido</option>
+                        <option value="suggestion">Sugerencias</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Tu mensaje..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer fijo -->
+    <footer class="footer">
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> Teléfono: +54 341 1234567</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: Av. Holmberg 5421, Córdoba</p>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <!-- Modal del Carrito -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items">
+                <!-- Aquí se mostrarán los items del carrito -->
+                <div class="empty-cart">
+                    <p>El carrito está vacío</p>
+                </div>
+            </div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total-amount">0</span></p>
+                <button id="pay-button">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
